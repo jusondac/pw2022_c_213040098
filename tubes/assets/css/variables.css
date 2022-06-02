@@ -1,0 +1,14 @@
+:root {
+  --color-light: #F5F5F5;
+  --color-white: #fff;
+  --color-dark: black;
+  --color-warning: linear-gradient(29deg, rgba(223,124,46,1) 0%, rgba(176,191,35,1) 100%);
+  --color-primary: linear-gradient(29deg, rgba(23,23,129,1) 0%, rgba(30,138,181,1) 100%);
+  --color-danger: linear-gradient(29deg, rgba(129,1,0,1) 0%, rgba(191,110,66,1) 100%);
+  --color-success: linear-gradient(29deg, rgba(30,108,18,1) 0%, rgba(43,219,47,1) 100%);
+  --color-secondary: linear-gradient(29deg, rgba(57,57,57,1) 0%, rgba(158,135,135,1) 100%);
+  --bg-primary: linear-gradient(29deg, rgba(0,15,43,1) 0%, rgba(66,71,176,1) 100%);
+  --font-default: 'Poppins', sans-serif;
+  --box-shadow: 0 2rem 3rem var(--color-dark);
+  /* --box-shadow: 20px 20px 60px var(--color-dark), -20px -20px 60px var(--color-primary); */
+}

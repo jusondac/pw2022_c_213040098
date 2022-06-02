@@ -1,0 +1,62 @@
+@import 'variables.css';
+.bg-dark { background: var(--color-dark) }
+.bg-primary, .btn-primary { background: var(--color-primary) !important; border:none;}
+.bg-warning, .btn-warning { background: var(--color-warning) !important; border:none;}
+.bg-danger, .btn-danger { background: var(--color-danger) !important; border:none;}
+.bg-success, .btn-success { background: var(--color-success) !important; border:none;}
+.bg-secondary, .btn-secondary { background: var(--color-secondary) !important; }
+.bg-transparent, .btn-transparent { background: transparent}
+
+.text-primary {color: var(--color-primary)}
+.text-warning {color: var(--color-warning)}
+.text-danger {color: var(--color-danger)}
+.text-success {color: var(--color-success)}
+.text-secondary {color: var(--color-secondary)}
+
+
+.nav-link, .navbar-brand { color: white !important; }
+.nav-link {
+  margin-left: 4rem;
+  transition: all 500ms ease;
+  border-radius: 3rem;
+  letter-spacing: 2px;
+}
+.brand-logo {width: 5rem;}
+
+.box-shadow { box-shadow: var(--box-shadow); transition: all 300ms ease;}
+.box-shadow:hover { box-shadow: none }
+
+.progress {border:none !important;}
+
+.card { border-radius: 1rem;width: 20vw !important; border:none; }
+.card-form { height: 20%;}
+.card-title span:last-child { font-size: 2rem;}
+.card-text h2 { font-size: 5rem; width: 100%; height: 100%;}
+.card-title span.text { border-radius: 3rem; background: var(--bg); width: 60%; height: 2rem; display: flex;justify-content: center; align-items: center;}
+
+
+
+.form-box {box-shadow: var(--box-shadow); padding: 1rem 2rem; border-radius: 1rem}
+
+.main {width: 70%;height: 70vh;}
+.main-table {padding: 0 2rem;}
+
+.main-bottom {display: flex; width: 100%; height: 100%;  justify-content: center; align-items: center; margin-top: 2rem}
+.main-bottom img {width: 30%; opacity: 0.6}
+.main-bottom div {color: white;  position:relative; left: 10rem; z-index: 2}
+.main-bottom div h1 {font-size: 5rem}
+.main-bottom div h4 {position: relative; right: 10vw}
+
+.rounded { border-radius: 8rem !important; padding: 1rem; width: 100%; display: flex;justify-content: center;}
+
+.info { width: 100%; height: 4rem; background: var(--color-primary); margin-bottom: 1rem; display: flex; align-items: center; flex-direction: column; justify-content: space-between;  transition: all 300ms ease; border-radius: 1rem}
+.info h5 {opacity: 0;  transition: all 300ms ease}
+.info h6 {transform: translateY(0.6rem); font-size: 2rem;  transition: all 300ms ease; letter-spacing: 3px; font-size: 1.6rem}
+.info:hover h5 {opacity: 1; font-size: 1.5rem; transform: translateY(-0.6rem);}
+.info:hover h6 {transform: translateY(-1rem); font-size: 1rem; opacity: 0;}
+
+
+/* .info h5:hover small {display: block} */
+
+.right {width: 30%;}
+.right-table {width: 90%; height: 60%;}
