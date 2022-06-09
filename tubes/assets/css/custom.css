@@ -19,7 +19,6 @@ table thead tr th {color: white}
 table tbody tr td {color: white}
 table tbody tr:last-child td { border: none; }
 
-
 .right-bottom a {transition: all 300ms ease;border: none;}
 .right-bottom a:hover {padding-left: 30%;justify-content: center}
 .right-bottom a:hover span {display: none;}

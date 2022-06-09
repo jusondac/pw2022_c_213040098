@@ -166,7 +166,7 @@
               </div>
             </div>
           </div>
-          <a href="patients_download" class="btn btn-success mt-5 me-5 box-shadow d-flex align-items-center justify-content-center">
+          <a href="patients_download.php" class="btn btn-success mt-5 me-5 box-shadow d-flex align-items-center justify-content-center">
             <span class="material-icons-sharp">
               download
             </span>

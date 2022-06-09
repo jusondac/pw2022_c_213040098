@@ -1,0 +1,21 @@
+img {
+  width: 4rem;
+  height: 4rem;
+  object-fit: cover !important;
+  border-radius: 10px
+  object-position: center;
+}
+table {
+  border-collapse: collapse;
+}
+thead tr th {
+  font-size: 12px;
+  text-transform: capitalize;
+}
+tbody tr {
+  text-align: center;
+  border: 1px solid black;
+}
+tr td {
+  text-align: center;
+}

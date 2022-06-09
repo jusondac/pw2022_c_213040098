@@ -77,7 +77,7 @@
             <h2 class="title">Sign up</h2>
             <div class="input-field">
               <i class="fas fa-user"></i>
-              <input type="text" name="username" placeholder="username" />
+              <input type="text" name="username" class="input-login" placeholder="username" />
             </div>
             <div class="input-field">
               <i class="fas fa-lock"></i>

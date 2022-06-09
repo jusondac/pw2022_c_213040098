@@ -5,7 +5,8 @@ ini_set('display_errors',1);
 
 // KONEKSI
 function koneksi() {
-  $conn = mysqli_connect('localhost','rejka','rejkapass','hospital') or die('KONEKSI GAGAL');
+  // $conn = mysqli_connect('localhost','rejka','rejkapass','hospital') or die('KONEKSI GAGAL');
+  $conn = mysqli_connect('localhost','id19059853_rejka','l4IT_K-un^qVfI=z','id19059853_hospital') or die('KONEKSI GAGAL');
   return $conn;
 }
 
