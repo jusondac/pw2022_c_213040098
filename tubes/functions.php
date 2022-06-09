@@ -41,8 +41,9 @@ function registrasi($data){
   // turn password from UTF-8 into Hash by PHP Default
   $password = password_hash($password, PASSWORD_DEFAULT);
 
-
-  $sql = "INSERT INTO users (username, password) VALUES ('$username', '$password')";
+	// 1 = user
+	// 2 = admin
+  $sql = "INSERT INTO users (username, password, role) VALUES ('$username', '$password', 1)";
   $result = mysqli_query($conn, $sql) or die(mysqli_error($conn));
   return mysqli_affected_rows($conn);
 }

@@ -1,6 +1,7 @@
 <?php
   ini_set('error_reporting', E_ALL);
   ini_set('display_errors',1);
+  require 'functions.php';
 
   session_start();
 
@@ -11,7 +12,6 @@
 
   require './model/application_model.php';
   require './model/patient.php';
-  require 'functions.php';
   $patient = new Patient();
 ?>
 <!DOCTYPE html>

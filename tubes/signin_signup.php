@@ -21,11 +21,6 @@
     }
   }
 
-  if( isset($_SESSION["login"]) ){
-    header('location: index.php');
-    exit;
-  }
-
   if( isset($_POST['login']) ) {
     $conn = koneksi();
     $username = $_POST['username'];
@@ -34,11 +29,8 @@
     if( mysqli_num_rows($username_existed) === 1 ){
       $row = mysqli_fetch_assoc($username_existed);
       if( password_verify($password, $row['password']) ){
-        $_SESSION["login"] = true;
-        if( isset($_POST['remember_me']) ){
-          setcookie('id',$row['id'],time()+60);
-          setcookie('key',hash('sha256',$row['username']),time() + 60);
-        }
+        $_SESSION["login"] 	= true;
+				$_SESSION["id"] 		=	$row['id'];
         header("Location: index.php");
         exit;
       }

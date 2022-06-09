@@ -3,6 +3,11 @@
   ini_set('display_errors',1);
   require 'functions.php';
 
+	session_start();
+
+	$id = $_SESSION['id'];
+	$user = query("SELECT * FROM users WHERE id = $id")[0];
+
   $per_page = 5;
   $step_page = 10;
   $all_data_count = mysqli_num_rows(just_query("SELECT * FROM patients"));
@@ -78,7 +83,9 @@
           <form class="d-flex" action="" method="get">
             <input type="text" class="form-control me-5" name="keyword" id="keyword" placeholder="cari..">
           </form>
-          <a href="./new_patients.php" class="btn btn-warning text-white me-5 box-shadow">baru</a>
+					<?php if((int)$user['role'] === 2): ?>
+	          <a href="./new_patients.php" class="btn btn-warning text-white me-5 box-shadow">baru</a>
+					<?php endif ?>
         </div>
         <div class="main-table" id="main-table">
           <table class="table table-hover text-center">
@@ -96,14 +103,10 @@
                 <td><?php echo $value['nama'] ?></td>
                 <td><?php echo $value['usia'] ?></td>
                 <td><?php echo $value['status'] ?></td>
+								<?php if((int)$user['role'] === 2): ?>
                 <td  style="width: 3rem">
                   <a href="update_patients.php?id=<?= $value['id'] ?>"  class="btn btn-success d-flex align-items-center justify-content-center box-shadow">
                     <span class="material-icons-sharp">edit</span>
-                  </a>
-                </td>
-                <td  style="width: 3rem">
-                  <a href="detail_patient.php?id=<?= $value['id'] ?>"  class="btn btn-primary d-flex align-items-center justify-content-center box-shadow">
-                    <span class="material-icons-sharp">visibility</span>
                   </a>
                 </td>
                 <td  style="width: 3rem">
@@ -111,11 +114,17 @@
                     <span class="material-icons-sharp">delete</span>
                   </a>
                 </td>
+								<?php endif ?>
+                <td  style="width: 3rem">
+                  <a href="detail_patient.php?id=<?= $value['id'] ?>"  class="btn btn-primary d-flex align-items-center justify-content-center box-shadow">
+                    <span class="material-icons-sharp">visibility</span>
+                  </a>
+                </td>
               </tr>
               <?php endforeach ?>
             </tbody>
           </table>
-          <div class="d-flex justify-content-center">
+          <div class="d-flex justify-content-center mt-5">
             <ul class="pagination">
               <?php if( $current_page > 1 ): ?>
                 <li class="page-item ">
@@ -143,8 +152,8 @@
           </div>
         </div>
       </div>
-      <sdiv class="right d-flex flex-column h-100 mt-5 pt-5">
-        <div class="right-table w-100 d-flex justify-content-center">
+      <div class="right d-flex flex-column h-100 mt-5 pt-5">
+        <div class="right-table w-100 d-flex justify-content-center flex-column">
           <div class="card box-shadow bg-primary text-white">
             <div class="card-body">
               <h5 class="card-title d-flex justify-content-between">
@@ -157,6 +166,12 @@
               </div>
             </div>
           </div>
+          <a href="patients_download" class="btn btn-success mt-5 me-5 box-shadow d-flex align-items-center justify-content-center">
+            <span class="material-icons-sharp">
+              download
+            </span>
+            Download PDF patients
+          </a>
         </div>
         <!-- END OF RIGHT TABLE -->
       </div>
